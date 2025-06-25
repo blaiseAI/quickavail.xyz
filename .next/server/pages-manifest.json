@@ -1,7 +1,19 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/create": "pages/create.js"
+  "/_error": "pages/_error.js",
+  "/admin/cleanup": "pages/admin/cleanup.html",
+  "/api/admin/cleanup": "pages/api/admin/cleanup.js",
+  "/api/analytics/cleanup": "pages/api/analytics/cleanup.js",
+  "/api/init-db": "pages/api/init-db.js",
+  "/api/robots.txt": "pages/api/robots.txt.js",
+  "/api/schedules/[shareId]": "pages/api/schedules/[shareId].js",
+  "/api/schedules": "pages/api/schedules.js",
+  "/api/sitemap.xml": "pages/api/sitemap.xml.js",
+  "/create": "pages/create.html",
+  "/api/time-slots": "pages/api/time-slots.js",
+  "/": "pages/index.html",
+  "/landing": "pages/landing.html",
+  "/share/[shareId]": "pages/share/[shareId].js",
+  "/404": "pages/404.html"
 }

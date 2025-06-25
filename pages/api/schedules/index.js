@@ -96,7 +96,7 @@ function generateShareId() {
 }
 
 // Calculate analytics for the schedule
-function calculateAnalytics(selectedDates, projects) {
+function calculateAnalytics(selectedDates, _projects) {
   let totalHours = 0;
   let daysSelected = 0;
   const projectsUsed = new Set();

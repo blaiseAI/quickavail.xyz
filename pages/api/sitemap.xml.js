@@ -1,4 +1,4 @@
-import { siteConfig, urls } from '../../lib/site.config';
+import { urls } from '../../lib/site.config';
 
 export default function handler(req, res) {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

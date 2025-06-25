@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { NextSeo, WebPageJsonLd, SoftwareAppJsonLd } from 'next-seo'
 import { pageSEO } from '../lib/seo.config'
-import { siteConfig, urls, structuredData } from '../lib/site.config'
+import { siteConfig, urls } from '../lib/site.config'
 
 export default function LandingPage() {
   const [activeFeature, setActiveFeature] = useState(0)

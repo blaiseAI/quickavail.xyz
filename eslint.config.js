@@ -15,7 +15,12 @@ export default defineConfig([
     ],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
+        JSX: 'readonly',
+      },
       parserOptions: {
         ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },
@@ -23,7 +28,30 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': ['error', { 
+        varsIgnorePattern: '^[A-Z_]',
+        argsIgnorePattern: '^_|^Component$'
+      }],
+      'no-case-declarations': 'off', // Allow let/const in case blocks
+      'no-undef': 'error',
     },
+  },
+  {
+    // Specific rules for API routes
+    files: ['pages/api/**/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
+  {
+    // Ignore build and dist directories
+    ignores: [
+      '.next/**',
+      'dist/**',
+      'node_modules/**',
+      'out/**',
+    ],
   },
 ])

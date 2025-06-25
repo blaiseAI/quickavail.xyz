@@ -135,11 +135,11 @@ const QuickAvail = ({ initialData = null, readOnly = false }) => {
       if (newDates[selectedProject][dateKey]) {
         console.log('Removing date:', dateKey);
         // Create new project object without the date
-        const { [dateKey]: removed, ...restDates } = newDates[selectedProject];
+        const { [dateKey]: _removed, ...restDates } = newDates[selectedProject];
         
         if (Object.keys(restDates).length === 0) {
           // Remove the entire project if no dates left
-          const { [selectedProject]: removedProject, ...restProjects } = newDates;
+          const { [selectedProject]: _removedProject, ...restProjects } = newDates;
           return restProjects;
         } else {
           newDates[selectedProject] = restDates;
@@ -385,7 +385,7 @@ const QuickAvail = ({ initialData = null, readOnly = false }) => {
       
     } catch (error) {
       console.error('Error generating link:', error);
-      alert('Failed to generate link. Please try again.');
+      setLinkError('Failed to generate link. Please try again.');
     } finally {
       setIsGeneratingLink(false);
     }
@@ -471,7 +471,7 @@ const QuickAvail = ({ initialData = null, readOnly = false }) => {
       ></div>
       
       <div className="flex items-center justify-between relative">
-        {steps.map((step, index) => (
+        {steps.map((step, _index) => (
           <div key={step.number} className="flex flex-col items-center">
             <div className={`w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold border-3 transition-all duration-300 ${
               step.number <= currentStep 
