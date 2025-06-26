@@ -1,7 +1,7 @@
 // Schedule creation page
 // URL: /create
 
-import QuickAvail from '../src/components/QuickAvail'
+import QuickAvail from '../components/QuickAvail'
 import { NextSeo, BreadcrumbJsonLd } from 'next-seo'
 import { pageSEO } from '../lib/seo.config'
 import { siteConfig, urls } from '../lib/site.config'

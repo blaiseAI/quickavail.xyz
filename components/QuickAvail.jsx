@@ -333,7 +333,7 @@ const QuickAvail = ({ initialData = null, readOnly = false }) => {
   };
 
   const [isGeneratingLink, setIsGeneratingLink] = useState(false);
-  const [linkError, setLinkError] = useState('');
+  const [linkError, _setLinkError] = useState('');
 
   const generateLink = async () => {
     if (!personName.trim() || !personEmail.trim()) {
@@ -385,7 +385,7 @@ const QuickAvail = ({ initialData = null, readOnly = false }) => {
       
     } catch (error) {
       console.error('Error generating link:', error);
-      setLinkError('Failed to generate link. Please try again.');
+      alert('Failed to generate link. Please try again.');
     } finally {
       setIsGeneratingLink(false);
     }
@@ -471,7 +471,7 @@ const QuickAvail = ({ initialData = null, readOnly = false }) => {
       ></div>
       
       <div className="flex items-center justify-between relative">
-        {steps.map((step, _index) => (
+        {steps.map((step) => (
           <div key={step.number} className="flex flex-col items-center">
             <div className={`w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold border-3 transition-all duration-300 ${
               step.number <= currentStep 

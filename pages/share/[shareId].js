@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import QuickAvail from '../../src/components/QuickAvail';
+import QuickAvail from '../../components/QuickAvail';
 import { NextSeo, EventJsonLd } from 'next-seo';
 import { generateScheduleSEO } from '../../lib/seo.config';
 

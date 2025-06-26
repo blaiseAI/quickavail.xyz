@@ -1,4 +1,4 @@
-import '../src/index.css'
+import '../styles/globals.css'
 import { DefaultSeo } from 'next-seo'
 import { defaultSEO } from '../lib/seo.config'
 
